@@ -1,7 +1,7 @@
 # Emp_Database_Mysql
 
 
-This is project for Tuwaiq Acadmy cource "SQL database implementation using Python"
+This is project for Tuwaiq Acadmy course "SQL database implementation using Python"
 
 
 
