@@ -2,7 +2,7 @@
 import mysql.connector
 from mysql.connector import Error
 
-# # 2. Connects to the MySQL database server:
+# . Connects to the MySQL database server:
 def create_connection(host_name, user_name, user_password ,db_name,unix_socket):
     connection = None
     try:
@@ -114,7 +114,7 @@ execute_query(connection, create_Department_table)
 execute_query(connection, create_Empl_Postion_table)
 execute_query(connection, create_Empl_Depart_table)
 execute_query(connection, create_Emply_rate_table)
-# -----------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -174,8 +174,7 @@ cursor = connection.cursor()
 cursor.executemany(create_Empl_Depart_query,Empl_Depart_val)
 connection.commit()
 
-# # __________________________________________
-#
+# #  Create function to read queries:
 def execute_read_query(connection, query):
     cursor = connection.cursor()
     result = None
@@ -187,13 +186,6 @@ def execute_read_query(connection, query):
         print(f"The error '{e}' occurred")
 
 
-
-
-
-
-#
-# __________________________________________
-#
 #
 # # 7. Create  queries:
 
@@ -223,11 +215,7 @@ Positions = execute_read_query(connection, select_Positions)
 for Positions in Positions:
     print(Positions)
 
-
-
-
-
-# # ___________________Update_______________________
+# Update
 
 update_Department_description = """
  UPDATE
@@ -240,7 +228,7 @@ update_Department_description = """
 
 execute_query(connection,update_Department_description)
 
-#--------------------delete --------------------
+#delete
 delete_Empl_Depart = "DELETE from Empl_Depart WHERE id =1"
 execute_query(connection,delete_Empl_Depart)
 # #
